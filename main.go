@@ -30,6 +30,9 @@ func main() {
 	case "-sliding_window_log":
 		sw := sliding_window.NewSlidingWindow(5, time.Second)
 		rate_limiter_client.SlidingWindowLogBurst(sw)
+	case "-sliding_window_counter":
+		sw := sliding_window.NewSlidingWindowCounter(5, time.Second)
+		rate_limiter_client.SlidingWindowCounterBurst(sw)
 	}
 
 }
